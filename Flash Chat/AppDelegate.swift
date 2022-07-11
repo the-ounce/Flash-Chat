@@ -2,12 +2,13 @@
 //  AppDelegate.swift
 //  Flash Chat
 //
-//  Created by Mykyta Havrylenko on 11.07.2022.
+//  Created by Angela Yu on 21/10/2019.
+//  Copyright © 2019 Angela Yu. All rights reserved.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
