@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth      
 
 class RegisterViewController: UIViewController {
 
@@ -14,6 +17,19 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     @IBAction func registerPressed(_ sender: UIButton) {
+        
+        if let emailAddress = emailTextfield.text, let password = passwordTextfield.text {
+            Auth.auth().createUser(withEmail: emailAddress, password: password) { authResult, error in
+                
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: "goFromRegisterToChat", sender: self)
+                }
+                
+            }
+        }
+        
     }
     
 }
