@@ -20,6 +20,9 @@
 		5593BE87287DA91C004186E7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5593BE86287DA91C004186E7 /* FirebaseAuth */; };
 		5593BE89287DA91C004186E7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5593BE88287DA91C004186E7 /* FirebaseFirestore */; };
 		5593BE8C287EE326004186E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593BE8B287EE326004186E7 /* Constants.swift */; };
+		5593BE8E287F1F07004186E7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593BE8D287F1F07004186E7 /* Message.swift */; };
+		5593BE9128802F8F004186E7 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593BE8F28802F8F004186E7 /* MessageCell.swift */; };
+		5593BE9228802F8F004186E7 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5593BE9028802F8F004186E7 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		5593BE83287DA7DB004186E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5593BE8B287EE326004186E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5593BE8D287F1F07004186E7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		5593BE8F28802F8F004186E7 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		5593BE9028802F8F004186E7 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
+				5593BE8F28802F8F004186E7 /* MessageCell.swift */,
+				5593BE9028802F8F004186E7 /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 		0B628194235DF03A00E35CAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5593BE8D287F1F07004186E7 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5593BE9228802F8F004186E7 /* MessageCell.xib in Resources */,
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
 				5593BE84287DA7DB004186E7 /* GoogleService-Info.plist in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
@@ -202,8 +212,10 @@
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
 				5593BE8C287EE326004186E7 /* Constants.swift in Sources */,
+				5593BE8E287F1F07004186E7 /* Message.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
+				5593BE9128802F8F004186E7 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -335,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
