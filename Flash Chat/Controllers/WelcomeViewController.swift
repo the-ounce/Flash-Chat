@@ -12,6 +12,12 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+//    // Before the screen loads
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.isNavigationBarHidden = true
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

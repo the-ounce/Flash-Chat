@@ -84,8 +84,10 @@ class ChatViewController: UIViewController {
                 if let e = error {
                     print("Error adding document: \(e)")
                 } else {
-                    self.messageTextfield.text = nil
-                    print("All good! Data saved!")
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = nil
+                    }
+                    
                 }
             }
         }
@@ -111,9 +113,26 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        let message = messages[indexPath.row]
         
-        cell.messageText.text = messages[indexPath.row].body
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        cell.messageText.text = message.body
+        
+        // Message form the current user
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.messageText.textColor = UIColor(named: K.BrandColors.purple)
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+        }
+        // Message from another sender
+        else {
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+            cell.messageText.textColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+        }
+
         
         return cell
         

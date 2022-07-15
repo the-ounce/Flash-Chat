@@ -21,11 +21,18 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X8j-r3-v0s">
                         <rect key="frame" x="10" y="10" width="333" height="91"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-36-fkC" userLabel="You Avatar Image">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="T8r-he-ZrU"/>
+                                    <constraint firstAttribute="height" constant="40" id="cfD-oJ-yis"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3z-pd-aug">
-                                <rect key="frame" x="0.0" y="0.0" width="273" height="56"/>
+                                <rect key="frame" x="60" y="0.0" width="213" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWb-3r-T0t">
-                                        <rect key="frame" x="10" y="10" width="253" height="36"/>
+                                        <rect key="frame" x="10" y="10" width="193" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="BrandLightPurple"/>
                                         <nil key="highlightedColor"/>
@@ -39,7 +46,7 @@
                                     <constraint firstItem="xWb-3r-T0t" firstAttribute="leading" secondItem="R3z-pd-aug" secondAttribute="leading" constant="10" id="g7j-SB-paS"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="UAn-mf-ckz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="UAn-mf-ckz" userLabel="Me Avater Image">
                                 <rect key="frame" x="293" y="0.0" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Vvg-74-Smg"/>
@@ -58,15 +65,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="avatarImage" destination="UAn-mf-ckz" id="JzM-Bs-t5u"/>
+                <outlet property="leftImageView" destination="QFE-36-fkC" id="nN1-w4-gbr"/>
                 <outlet property="messageBubble" destination="R3z-pd-aug" id="pBG-TV-5mA"/>
                 <outlet property="messageText" destination="xWb-3r-T0t" id="7yC-vk-Phz"/>
+                <outlet property="rightImageView" destination="UAn-mf-ckz" id="1KR-fH-r5F"/>
             </connections>
             <point key="canvasLocation" x="161.59420289855075" y="112.83482142857142"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
+        <image name="YouAvatar" width="36" height="36"/>
         <namedColor name="BrandLightPurple">
             <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
