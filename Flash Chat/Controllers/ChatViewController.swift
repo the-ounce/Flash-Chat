@@ -68,6 +68,12 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        
+        // bug fix with empty textField.text (nil = "")
+        guard messageTextfield.text != "" else {
+            return messageTextfield.placeholder = "Please enter something"
+        }
+        
         if let messageBody = messageTextfield.text, let sender = Auth.auth().currentUser?.email {
             
             db.collection(K.FStore.collectionName).addDocument(data: [
@@ -78,7 +84,7 @@ class ChatViewController: UIViewController {
                 if let e = error {
                     print("Error adding document: \(e)")
                 } else {
-                    self.messageTextfield.text = ""
+                    self.messageTextfield.text = nil
                     print("All good! Data saved!")
                 }
             }
@@ -115,3 +121,5 @@ extension ChatViewController: UITableViewDataSource {
     
     
 }
+
+
